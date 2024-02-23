@@ -1,0 +1,8 @@
+<p>parent-in works!</p>
+<input [(ngModel)]="Text">
+<button class="mx-2" (click)="Add_Array()">ADD</button>
+<div class="row">
+    <div class="col-1"><input type="checkbox" [(ngModel)]="Chk_Child"></div>
+</div>
+
+<app-child-in *ngIf="!Chk_Child" [Child_Txt] = Arr_Text></app-child-in>
