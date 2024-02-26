@@ -1,0 +1,21 @@
+<div class="container mt-2">
+    <form [formGroup]="Reactive_Form_Content" (submit)="Reactive_Form_Summit()">
+        <div class="row">
+            <div class="col-3"><label>First Name</label></div>
+            <div class="col-3"><input type="text" formControlName="First_Name"></div>
+            <div class="col-3"><label>Second Name</label></div>
+            <div class="col-3"><input type="text" formControlName="Second_Name"></div>
+        </div>
+        <div class="row" formGroupName="address">
+            <div class="col-3">Area</div>
+            <div class="col-3"><input type="text" formControlName="Area"></div>
+            <div class="col-3">Mobile</div>
+            <div class="col-3"><input type="text" formControlName="Mobile"></div>
+        </div>
+        <div class="row">
+            <button type="submit">Submit Reactive</button>
+        </div>
+    </form>
+</div>
+
+

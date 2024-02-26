@@ -1,18 +1,18 @@
 
 
 <div class="container border">
-    <form #constactForm="ngForm" (submit)="Form_Submit(constactForm)">
+    <form #constactForm="ngForm" (submit)="Form_Submit(constactForm)" ngNativeValidate>
         <div class="row">
             <div class="col-2">First Name</div>
-            <div class="col-3"><input name="First_Name" [(ngModel)]="content.First_Name"></div>
+            <div class="col-3"><input name="First_Name" [(ngModel)]="content.First_Name" required></div>
             <div class="col-2">Last Name</div>
             <div class="col-3"><input name="Last_Name" [(ngModel)]="content.Second_Name"></div>
         </div>
         <div class="row" formGroupName="Address">
             <div class="col-2">Address</div>
-            <div class="col-3"><input name="Area" [(ngModel)]="content.Address.Area"></div>
+            <div class="col-3"><input name="Areas" [(ngModel)]="content.Address.Areas"></div>
             <div class="col-2">Mobile</div>
-            <div class="col-3"><input name="mobile" [(ngModel)]="content.Address.Mobile"></div>
+            <div class="col-3"><input name="mobiles" [(ngModel)]="content.Address.Mobiles"></div>
         </div> 
         <div class="row">
             <button type="submit">Submit</button>

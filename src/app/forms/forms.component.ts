@@ -14,7 +14,7 @@ export class FormsComponent implements OnInit {
     this.content ={
       First_Name : "keerthi",
       Second_Name : "Kumar",
-      Address:{Area:"Stress",Mobile:"8270869380"}
+      Address:{Areas:"Stress",Mobiles:"8270869380"}
     }
   }
  
@@ -30,7 +30,7 @@ class Form_Content
   First_Name  !: string;
   Second_Name !: string ;
   Address !: {
-    Mobile :  string;
-    Area   :  string;
+    Mobiles :  string;
+    Areas   :  string;
   }    
 }
