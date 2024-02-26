@@ -2,12 +2,20 @@
     <form [formGroup]="Reactive_Form_Content" (submit)="Reactive_Form_Summit()">
         <div class="row">
             <div class="col-3"><label>First Name</label></div>
-            <div class="col-3"><input type="text" formControlName="First_Name"></div>
+            <div class="col-3"><input type="text" formControlName="First_Name">
+                <span *ngIf="((!Reactive_Form_Content.controls.First_Name.valid) && (Reactive_Form_Content.controls.First_Name.touched))">
+                    <span *ngIf="((!Reactive_Form_Content.controls.First_Name.valid))">Fill Text</span>
+                    <span *ngIf="((Reactive_Form_Content.controls.First_Name?.errors?.['minlength']))">Min Text</span>
+                </span>
+            </div>
             <div class="col-3"><label>Second Name</label></div>
             <div class="col-3"><input type="text" formControlName="Second_Name"></div>
         </div>
         <div class="row" formGroupName="address">
             <div class="col-3">Area</div>
+            <span *ngIf="((!Reactive_Form_Content.controls.address.controls.Area.valid) && (Reactive_Form_Content.controls.address.controls.Area.touched))">
+                <span *ngIf="((Reactive_Form_Content.controls.address.controls.Area.valid))">Fill the Text</span>
+            </span>
             <div class="col-3"><input type="text" formControlName="Area"></div>
             <div class="col-3">Mobile</div>
             <div class="col-3"><input type="text" formControlName="Mobile"></div>
