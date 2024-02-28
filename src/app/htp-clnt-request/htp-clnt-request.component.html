@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="row"><h4>Submit the JSON Form </h4> </div>
+        <div class="row">
+            <form [formGroup]="JSON_Set_Data" action="" method="post" (submit)="set_json_user_data()">
+                <div class="row">
+                    <div class="col-3">Name</div>
+                    <div class="col-3"><input type="text" formControlName="set_user_name"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">E-Main</div>
+                    <div class="col-3"><input type="text" formControlName="set_mail_id"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary">Submit Data</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="row"><h4>List the JSON Data Value</h4> </div>
+        <li *ngFor="let users of User_name"><label>{{users.name}}</label> <label>  {{users.email}}</label></li>
+    </div>
+</div>
